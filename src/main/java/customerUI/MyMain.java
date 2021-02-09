@@ -12,10 +12,10 @@ public class MyMain {
 		int option;
 		MyUserView myMedia = new MyUserView();
 		do {
-			String[] menuItems = new String[] { "Ins�rer un Utilisateur", "Eliminer User", "Visualiser user",
+			String[] menuItems = new String[] { "Insérer un Utilisateur", " Éliminer User", "Visualiser user",
 					"Rechercher" };
 
-			Menu menu = new Menu("Gestion Financiere", menuItems);
+			Menu menu = new Menu("Gestion Financiére", menuItems);
 			option = menu.showAndGetOption();
 
 			switch (option) {
