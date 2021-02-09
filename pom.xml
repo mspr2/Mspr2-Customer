@@ -33,13 +33,20 @@
 		<encoding>UTF-8</encoding>
             </configuration>
         </plugin>
+	
+	<plugin>            
+	  <groupId>org.apache.maven.plugins</groupId>
+ 	 <artifactId>maven-war-plugin</artifactId>
+	  <configuration>
+   		 <webXml>src\main\webapp\WEB-INF\web.xml</webXml>        
+  	</configuration>
+	</plugin>
 
 	</plugins>
 </build>
 
 <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 </properties>
 
 </project>
