@@ -62,7 +62,7 @@ public class CustomerTest {
 
 	@Test
 	public void testGetSetBirthDay() {
-		LocalDate date = LocalDate.of(1987, 07, 10);
+		LocalDate date = LocalDate.of(1988, 07, 10);
 		customer.setBirthDay(LocalDate.of(1987, 07, 10));
 		assertEquals(date, customer.getBirthDay());
 	}
