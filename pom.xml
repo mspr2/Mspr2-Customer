@@ -10,7 +10,7 @@
 	<dependencies>
 		<dependency>
     		<groupId>junit</groupId>
-    		<artifactId>junitsa</artifactId>
+    		<artifactId>junit</artifactId>
     		<version>4.13.1</version>
     		<scope>test</scope>
 		</dependency>
