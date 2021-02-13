@@ -62,7 +62,7 @@ public class CustomerTest {
 
 	@Test
 	public void testGetSetBirthDay() {
-		LocalDate date = LocalDate.of(1987, 07, 10);
+		LocalDate date = LocalDate.of(1988, 07, 10);
 		customer.setBirthDay(LocalDate.of(1987, 07, 10));
 		assertEquals(date, customer.getBirthDay());
 	}
@@ -96,5 +96,17 @@ public class CustomerTest {
 		assertTrue(customer1.equals(customer2));
 
 	}
+
+	@AfterMethod
+	public void quit(ITestResult.FAILURE) {
+
+		driver.quit();
+		if (result.getStatus() == ITestResult.FAILURE) {
+			BasicCredentials creds = new BasicCredentials("admin", "admin");
+			JiraClient jira = new JiraClient("http://localhost:8081", creds);
+			Issue issueName = jira.createIssue("AUT", "Bug".field(Field.SUMMARY, result.getMethod().getMethod().getMethodName + "échoue en raison de : " + result.getThrowable().toString()).field(Field.DESCRIPTION, "Obtenir la description").execute();
+			System.out.println("Le ticket est crée dans JIRA avec la clé du ticket" + issueName.getKey());
+
+		}
 
 }
